@@ -1,5 +1,3 @@
-# I have started exploring multiple repositories to see how i can use different aspects and how i could use them for my own project.
-# I have learned how I could make different levels of difficulty, how to use ASCII to make the game look better, and different ways to 
-# make the game more fun.
+# Hunter - I have started exploring multiple repositories to see how I can use different aspects and how i could use them for my own project. The main repository I have forcused on is one called hangman in python. I have learned how I could make different levels of difficulty, how to use ASCII to make the game look better, and different ways to make the game more fun.
 
 # A- I Looked at a fun little game that taught me that there are endless possibilities when it comes to coding, even with the code we have only learned this semester it seems very possible to create something complex such as the game i looked at. The code was all similar to what we have learned and really opened up my eyes to how far one can go with coding.
