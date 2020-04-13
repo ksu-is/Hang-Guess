@@ -1,2 +1,2 @@
 # Hang-Guess
-# Hunter Giles and 
+# Hunter Giles and Alec Lombardi
