@@ -6,3 +6,6 @@ We have been working on getting all the selection methods and the startup for th
 
 Started working and making the letter guessing programs with the lose and win messages. 2nd
 
+We both decided that the code we were using was not doing the processes we wanted so we changed it up and now are back on track. 3rd
+
+We add 3 text documents for each different difficulty. 4th
