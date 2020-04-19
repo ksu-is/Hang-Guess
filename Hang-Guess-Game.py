@@ -113,7 +113,110 @@ def easy():
                 print('\n')
                 score = 0
                 difficultyEASY()
+                
+#if the user picked medium for their difficulty
+def med():
+    global score 
+    print ("\nStart guessing...")
 
+    MEDWORDS = open("Med.txt","r+")
+    words = []
+    for item in MEDWORDS:
+        words.append(item.strip('\n'))
+
+    time.sleep(0.5)
+
+    word = random.choice(words).lower()
+    guesses = ''
+    fails = 0
+    while fails >= 0 and fails < 10:           
+        failed = 0                
+        for char in word:      
+            if char in guesses:    
+                print (char,)    
+
+            else:
+                print ("_"),     
+                failed += 1    
+        if failed == 0:        
+            print ("\nYou won, GOOD JOB!")
+            score = score + 1
+            print ("You now have a score of, ", score)
+            print('\n')
+            difficultyMED()
+
+        guess = input("\nGuess a letter:").lower()
+        while len(guess)==0:
+            guess = input("\nTry again:").lower()
+        guess = guess[0]
+        guesses += guess   
+        if guess not in word:  
+            fails += 1        
+            print ("\nWrong")
+
+            if fails == 1:
+                print ("You have", + fails, "fail....WATCH OUT!" )
+            elif fails >= 2 and fails < 10:
+                print ("You have", + fails, "fails....WATCH OUT!" ) 
+            if fails == 10:           
+                print ("You Lose\n")
+                print ("You now have a score of, ", score)
+                print ("the word was,", word)
+                print('\n')
+                score = 0 
+                difficultyMED()     
+
+#if the user picked hard for their difficulty
+def hard():
+    global score  
+    print ("\nStart guessing...")
+
+    HARDWORDS = open("Hard.txt","r+")
+    words = []
+    for item in HARDWORDS:
+        words.append(item.strip('\n'))
+
+    time.sleep(0.5)
+
+    word = random.choice(words).lower()
+    guesses = ''
+    fails = 0
+    while fails >= 0 and fails < 10:  #try to fix this         
+        failed = 0                
+        for char in word:      
+            if char in guesses:    
+                print (char,)    
+
+            else:
+                print ("_"),     
+                failed += 1    
+        if failed == 0:        
+            print ("\nYou won, GOOD JOB!")
+            score = score + 1
+            print ("You now have a score of, ", score)
+            print('\n')
+            difficultyHARD()
+
+        guess = input("\nGuess a letter:").lower()
+        while len(guess)==0:
+            guess = input("\nTry again:").lower()
+        guess = guess[0]
+        guesses += guess   
+        if guess not in word:  
+            fails += 1        
+            print ("\nWrong")
+
+            if fails == 1:
+                print ("You have", + fails, "fail....WATCH OUT!" )
+            elif fails >= 2 and fails < 10:
+                print ("You have", + fails, "fails....WATCH OUT!" ) 
+            if fails == 10:           
+                print ("You Lose\n")
+                print ("You now have a score of, ", score)
+                print ("the word was,", word)
+                print('\n')
+                score = 0 
+                difficultyHARD()
 
 
 
