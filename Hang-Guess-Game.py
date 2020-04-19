@@ -62,7 +62,57 @@ def difficulty():
         time.sleep(1)
         difficulty()   
 
+#if the user picked easy for their difficulty
+def easy():
+    global score 
+    print ("\nStart guessing...")
 
+    EASYWORDS = open("Easy.txt","r+")
+    words = []
+    for item in EASYWORDS:
+        words.append(item.strip('\n'))
+
+    time.sleep(0.5)
+
+    word = random.choice(words).lower()
+    guesses = ''
+    fails = 0
+    while fails >= 0 and fails < 10:         
+        failed = 0                
+        for char in word:      
+            if char in guesses:    
+                print (char,)
+
+            else:
+                print ("_"),     
+                failed += 1    
+        if failed == 0:        
+            print ("\nYou won, GOOD JOB!")
+            score = score + 1
+            print ("You now have a score of, ", score)
+            print('\n')
+            difficultyEASY()
+
+        guess = input("\nGuess a letter:").lower()
+        while len(guess)==0:
+            guess = input("\nTry again:").lower()
+        guess = guess[0]
+        guesses += guess 
+        if guess not in word:
+            fails += 1
+            print ("\nWrong")
+
+            if fails == 1:
+                print ("You have", + fails, "fail....WATCH OUT!" )
+            elif fails >= 2 and fails < 10:
+                print ("You have", + fails, "fails....WATCH OUT!" )
+            if fails == 10:
+                print ("You Lose\n")
+                print ("You now have a score of, ", score)
+                print ("the word was,", word)
+                print('\n')
+                score = 0
+                difficultyEASY()
 
 
 
