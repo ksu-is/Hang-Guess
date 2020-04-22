@@ -8,6 +8,7 @@ Started working and making the letter guessing programs with the lose and win me
 
 We both decided that the code we were using was not doing the processes we wanted so we changed it up and now are back on track. 3rd
 
+
 We add 3 text documents for each different difficulty. 4th
 
 We have the code up and running just need to add so finishing touchs to make it cleaner. 5th
